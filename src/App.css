@@ -1,0 +1,299 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --negro: #111111;
+  --gris: #777777;
+  --gris-claro: #f5f5f5;
+}
+
+body{
+  background: #fff;
+  color: var(--negro);
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.Header{
+  width: 100%;
+  padding: 28px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+    li{
+      a{
+        text-decoration: none;
+        color: var(--negro);
+        font-size: 15px;
+        font-weight: 700;
+        border-bottom: 2px solid transparent;
+        transition: .3s;
+
+        &:hover{
+          border-bottom: 2px solid #111;
+        }
+      }
+    }
+  }
+}
+
+/* HERO */
+.Hero{
+  width: 100%;
+  padding: 60px 90px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  .Inicio{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    .Titulo{
+      font-size: 84px;
+      font-weight: 800;
+      line-height: .95;
+    }
+
+    .Descripcion{
+      font-size: 24px;
+      font-weight: 700;
+      color: #444;
+    }
+
+    .Formacion{
+      font-size: 16px;
+      font-weight: 700;
+      color: #555;
+    }
+
+    .Email{
+      font-size: 16px;
+      color: var(--gris);
+    }
+
+    .Redes{
+      display: flex;
+      gap: 18px;
+      list-style: none;
+
+      a{
+        text-decoration: none;
+        color: var(--negro);
+        font-size: 15px;
+        font-weight: 700;
+        border-bottom: 2px solid transparent;
+        transition: .3s;
+
+        &:hover{
+          border-bottom: 2px solid #111;
+        }
+      }
+    }
+  }
+
+  .FotoPerfil{
+    img{
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+    }
+  }
+}
+
+/* DIVISOR */
+.Divisor{
+  width: 40%;
+  height: 1px;
+  margin: 60px 0 60px 90px;
+  background: #111;
+  opacity: .8;
+}
+
+/* HABILIDADES */
+.Habilidades{
+  width: 100%;
+  padding: 0 90px 80px 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  .Subtitulo{
+    font-size: 40px;
+    font-weight: 800;
+  }
+
+  .Categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+
+    h3{
+      font-size: 18px;
+      font-weight: 800;
+    }
+  }
+
+  .TecnologiasList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .TechTag{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--gris-claro);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--negro);
+  }
+
+  .tech-icon{
+    font-size: 14px;
+    font-weight: 900;
+  }
+}
+
+/* EXPERIENCIA */
+.Experiencia{
+  width: 100%;
+  padding: 0 90px 90px 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .Trabajo{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    .TrabajoTop{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3{
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      span{
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--gris);
+      }
+    }
+
+    p{
+      max-width: 750px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+    }
+  }
+}
+
+/* CONTACTO */
+.Contacto{
+  width: 100%;
+  padding: 80px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+
+  border-top: none;
+
+  .ContactoInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    .ContactoTop h3{
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    p{
+      max-width: 600px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .LinksContacto{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+
+      a{
+        text-decoration: none;
+        color: var(--negro);
+        font-size: 15px;
+        font-weight: 700;
+        border-bottom: 2px solid transparent;
+        transition: .3s;
+
+        &:hover{
+          border-bottom: 2px solid #111;
+        }
+      }
+    }
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+
+  .Hero{
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+
+    .Redes{
+      justify-content: center;
+    }
+  }
+
+  .FotoPerfil img{
+    width: 240px;
+    height: 240px;
+  }
+
+  .Titulo{
+    font-size: 52px;
+  }
+
+  .Divisor{
+    width: 70%;
+    margin: 50px auto;
+  }
+
+  .Habilidades,
+  .Experiencia{
+    padding: 0 30px 60px 30px;
+  }
+}
