@@ -6,6 +6,7 @@ import Footer from './components/Footer.jsx';
 import Inicio from './pages/Inicio.jsx';
 import Habilidades from './pages/Habilidades.jsx';
 import Experiencia from './pages/Experiencia.jsx';
+import Proyectos from './pages/Proyectos.jsx';
 import Contacto from './pages/Contacto.jsx';
 
 function App() {
@@ -29,6 +30,12 @@ function App() {
 
         <section id="experiencia">
           <Experiencia />
+        </section>
+
+        <div className="Divisor"></div>
+
+        <section id="proyectos">
+          <Proyectos />
         </section>
 
         <div className="Divisor"></div>
