@@ -1,35 +1,38 @@
 import { memo } from 'react';
 
-import factsImg from '../assets/facts.png';
+import documentacion from '../assets/docu.png';
 
 const PROYECTOS = [
   {
     id: 1,
-    nombre: 'FACTS KODE',
+
+    nombre: 'BARBER LIFE',
 
     descripcion:
-      'Landing page moderna desarrollada con HTML, CSS y JavaScript puro para una agencia digital enfocada en desarrollo web y soluciones tecnológicas. El proyecto cuenta con diseño responsive, estructura limpia, animaciones suaves y una identidad visual profesional orientada a negocios digitales.',
+      'Barber Life es una plataforma web para la gestión integral de barberías desarrollada como proyecto académico. Permite administrar turnos, clientes, servicios y personal mediante una interfaz moderna construida con Angular y TypeScript. El backend fue desarrollado con Python y Django, implementando una arquitectura escalable y orientada a la administración eficiente del negocio. El proyecto fue gestionado mediante metodologías ágiles Scrum e incluye documentación funcional y técnica.',
 
-    imagen: factsImg,
+    imagen: documentacion,
 
-    github: 'https://github.com/Fabricio-Agustin/web-facts',
+    github: 'https://github.com/Fabricio-Agustin/documentacion-abp',
 
-    sitio: 'https://web-facts.vercel.app/',
+    sitio: 'https://barber-life.vercel.app/',
 
     tecnologias: [
       {
-        icono: 'fa-brands fa-html5',
-        nombre: 'HTML5'
+        icono: 'fa-brands fa-angular',
+        nombre: 'Angular'
       },
-
       {
-        icono: 'fa-brands fa-css3-alt',
-        nombre: 'CSS3'
+        icono: 'fa-brands fa-python',
+        nombre: 'Python'
       },
-
       {
-        icono: 'fa-brands fa-js',
-        nombre: 'JavaScript'
+        icono: 'fa-solid fa-server',
+        nombre: 'Django'
+      },
+      {
+        icono: 'fa-solid fa-code',
+        nombre: 'TypeScript'
       }
     ]
   }
@@ -46,7 +49,6 @@ const TarjetaProyecto = memo(
   }) => {
     return (
       <article className="ProyectoCard">
-        
         <a
           href={sitio}
           target="_blank"
@@ -55,13 +57,12 @@ const TarjetaProyecto = memo(
         >
           <img
             src={imagen}
-            alt={nombre}
+            alt={`Proyecto ${nombre}`}
             loading="lazy"
           />
         </a>
 
         <div className="ProyectoContenido">
-
           <h3>{nombre}</h3>
 
           <p>{descripcion}</p>
@@ -83,7 +84,6 @@ const TarjetaProyecto = memo(
           </div>
 
           <div className="ProyectoLinks">
-
             <a
               href={github}
               target="_blank"
@@ -91,8 +91,7 @@ const TarjetaProyecto = memo(
               className="BtnGithub"
             >
               <i className="fa-brands fa-github"></i>
-
-              Ver Código
+              Ver Repositorio
             </a>
 
             <a
@@ -102,10 +101,8 @@ const TarjetaProyecto = memo(
               className="BtnSitio"
             >
               <i className="fa-solid fa-arrow-up-right-from-square"></i>
-
-              Ver Sitio
+              Ver Proyecto
             </a>
-
           </div>
         </div>
       </article>
@@ -126,14 +123,12 @@ function Proyectos() {
       </h2>
 
       <div className="ProyectosGrid">
-
         {PROYECTOS.map((proyecto) => (
           <TarjetaProyecto
             key={proyecto.id}
             {...proyecto}
           />
         ))}
-
       </div>
     </section>
   );
