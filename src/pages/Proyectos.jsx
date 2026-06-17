@@ -1,38 +1,30 @@
 import { memo } from 'react';
 
-import documentacion from '../assets/docu.png';
+import documentacion from '../assets/argbroker.png';
 
 const PROYECTOS = [
   {
     id: 1,
 
-    nombre: 'BARBER LIFE',
+    nombre: 'ARGBROKER',
 
     descripcion:
-      'Barber Life es una plataforma web para la gestión integral de barberías desarrollada como proyecto académico. Permite administrar turnos, clientes, servicios y personal mediante una interfaz moderna construida con Angular y TypeScript. El backend fue desarrollado con Python y Django, implementando una arquitectura escalable y orientada a la administración eficiente del negocio. El proyecto fue gestionado mediante metodologías ágiles Scrum e incluye documentación funcional y técnica.',
+      'ArgBroker es una aplicación de consola desarrollada en Python y MySQL para la simulación de compra y venta de acciones. Permite gestionar operaciones bursátiles, consultar el historial completo de transacciones realizadas, administrar usuarios y visualizar la cartera de inversiones. El proyecto fue diseñado utilizando una base de datos relacional para garantizar la persistencia de la información y aplicar buenas prácticas de programación orientadas a la gestión eficiente de datos financieros.',
 
     imagen: documentacion,
 
-    github: 'https://github.com/Fabricio-Agustin/documentacion-abp',
+    github: 'https://github.com/Fabricio-Agustin/ARGBroker',
 
-    sitio: 'https://barber-life.vercel.app/',
+    sitio: 'https://github.com/Fabricio-Agustin/ARGBroker',
 
     tecnologias: [
-      {
-        icono: 'fa-brands fa-angular',
-        nombre: 'Angular'
-      },
       {
         icono: 'fa-brands fa-python',
         nombre: 'Python'
       },
       {
-        icono: 'fa-solid fa-server',
-        nombre: 'Django'
-      },
-      {
-        icono: 'fa-solid fa-code',
-        nombre: 'TypeScript'
+        icono: 'fa-solid fa-database',
+        nombre: 'MySQL'
       }
     ]
   }
