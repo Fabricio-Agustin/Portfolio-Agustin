@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const DATA_HABILIDADES = [
   {
@@ -43,7 +44,7 @@ const DATA_HABILIDADES = [
 function TechTag({ name, icon }) {
   return (
     <span className="TechTag">
-      <i className={icon}></i>
+      <i className={icon} aria-hidden="true"></i>
       {name}
     </span>
   );
@@ -51,7 +52,7 @@ function TechTag({ name, icon }) {
 
 function Categoria({ categoria, tecnologias }) {
   return (
-    <div className="Categoria">
+    <article className="Categoria">
       <h3>{categoria}</h3>
 
       <div className="TecnologiasList">
@@ -63,31 +64,43 @@ function Categoria({ categoria, tecnologias }) {
           />
         ))}
       </div>
-    </div>
+    </article>
   );
 }
 
 function Habilidades() {
   return (
-    <section id="habilidades" className="Habilidades">
+    <>
+      <Helmet>
+        <title>Habilidades | Agustín Gibaut | Frontend Developer React</title>
 
-      <h2 className="Subtitulo">
-        Habilidades
-      </h2>
+        <meta
+          name="description"
+          content="Conocé las habilidades técnicas de Agustín Gibaut como desarrollador frontend. Experiencia en React, JavaScript, TypeScript, Node.js, Express, Python, PostgreSQL, MongoDB, Firebase, Git, GitHub, Docker y Figma."
+        />
 
-      <div className="GridHabilidades">
+        <meta
+          name="keywords"
+          content="Agustín Gibaut, React, JavaScript, TypeScript, Node.js, Express, Python, PostgreSQL, MongoDB, Firebase, Git, Docker, Frontend Developer"
+        />
 
-        {DATA_HABILIDADES.map((item) => (
-          <Categoria
-            key={item.id}
-            categoria={item.categoria}
-            tecnologias={item.tecnologias}
-          />
-        ))}
+        <meta name="robots" content="index, follow" />
+      </Helmet>
 
-      </div>
+      <section id="habilidades" className="Habilidades">
+        <h2 className="Subtitulo">Habilidades Técnicas</h2>
 
-    </section>
+        <div className="GridHabilidades">
+          {DATA_HABILIDADES.map((item) => (
+            <Categoria
+              key={item.id}
+              categoria={item.categoria}
+              tecnologias={item.tecnologias}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 

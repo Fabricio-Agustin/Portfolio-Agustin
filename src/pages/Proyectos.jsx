@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import documentacion from '../assets/argbroker.png';
 import cerditoBank from '../assets/cerdito.png';
@@ -8,7 +9,7 @@ const PROYECTOS = [
     id: 1,
     nombre: 'ARGBROKER',
     descripcion:
-      'ArgBroker es una aplicación de consola desarrollada en Python y MySQL para la simulación de compra y venta de acciones. Permite gestionar operaciones bursátiles, consultar el historial completo de transacciones realizadas, administrar usuarios y visualizar la cartera de inversiones. El proyecto fue diseñado utilizando una base de datos relacional para garantizar la persistencia de la información y aplicar buenas prácticas de programación orientadas a la gestión eficiente de datos financieros.',
+    'ArgBroker es una aplicación de consola desarrollada en Python y MySQL para la simulación de compra y venta de acciones. Permite gestionar operaciones bursátiles, consultar el historial de transacciones, administrar usuarios y visualizar la cartera de inversiones.',
     imagen: documentacion,
     github: 'https://github.com/Fabricio-Agustin/ARGBroker',
     sitio: 'https://github.com/Fabricio-Agustin/ARGBroker',
@@ -27,7 +28,7 @@ const PROYECTOS = [
     id: 2,
     nombre: 'CERDITO BANK',
     descripcion:
-      'Cerdito Bank es una aplicación web de simulación bancaria desarrollada con JavaScript. Fue creada con fines educativos para profundizar en conceptos fundamentales del desarrollo frontend, como el uso de LocalStorage para persistencia de datos, autenticación de usuarios, validaciones, manipulación del DOM, gestión de sesiones y buenas prácticas relacionadas con la seguridad en aplicaciones web. Permite realizar operaciones bancarias simuladas, consultar movimientos y administrar cuentas en un entorno de aprendizaje interactivo.',
+      'Cerdito Bank es una aplicación web desarrollada con JavaScript que simula operaciones bancarias utilizando LocalStorage, autenticación de usuarios, validaciones, manejo del DOM y gestión de sesiones.',
     imagen: cerditoBank,
     github: 'https://github.com/Fabricio-Agustin/Cerdito-banck',
     sitio: 'https://cerdito-banck.vercel.app/',
@@ -68,10 +69,11 @@ const TarjetaProyecto = memo(
           target="_blank"
           rel="noopener noreferrer"
           className="ProyectoImagen"
+          aria-label={`Ver proyecto ${nombre}`}
         >
           <img
             src={imagen}
-            alt={`Proyecto ${nombre}`}
+            alt={`Captura del proyecto ${nombre}`}
             loading="lazy"
           />
         </a>
@@ -89,7 +91,7 @@ const TarjetaProyecto = memo(
               >
                 <i
                   className={tech.icono}
-                  title={tech.nombre}
+                  aria-hidden="true"
                 ></i>
 
                 <span>{tech.nombre}</span>
@@ -104,7 +106,10 @@ const TarjetaProyecto = memo(
               rel="noopener noreferrer"
               className="BtnGithub"
             >
-              <i className="fa-brands fa-github"></i>
+              <i
+                className="fa-brands fa-github"
+                aria-hidden="true"
+              ></i>
               Ver Repositorio
             </a>
 
@@ -114,7 +119,10 @@ const TarjetaProyecto = memo(
               rel="noopener noreferrer"
               className="BtnSitio"
             >
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              <i
+                className="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"
+              ></i>
               Ver Proyecto
             </a>
           </div>
@@ -128,23 +136,41 @@ TarjetaProyecto.displayName = 'TarjetaProyecto';
 
 function Proyectos() {
   return (
-    <section
-      id="proyectos"
-      className="Proyectos"
-    >
-      <h2 className="Subtitulo">
-        Proyectos
-      </h2>
+    <>
+      <Helmet>
+        <title>Proyectos | Agustín Gibaut | Frontend Developer React</title>
 
-      <div className="ProyectosGrid">
-        {PROYECTOS.map((proyecto) => (
-          <TarjetaProyecto
-            key={proyecto.id}
-            {...proyecto}
-          />
-        ))}
-      </div>
-    </section>
+        <meta
+          name="description"
+          content="Portfolio de proyectos desarrollados por Agustín Gibaut utilizando React, JavaScript, Python, Node.js, MySQL, HTML5 y CSS3."
+        />
+
+        <meta
+          name="keywords"
+          content="Agustín Gibaut, Portfolio, React, JavaScript, Python, MySQL, Node.js, Proyectos Web, Frontend Developer"
+        />
+
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
+      <section
+        id="proyectos"
+        className="Proyectos"
+      >
+        <h2 className="Subtitulo">
+          Proyectos Destacados
+        </h2>
+
+        <div className="ProyectosGrid">
+          {PROYECTOS.map((proyecto) => (
+            <TarjetaProyecto
+              key={proyecto.id}
+              {...proyecto}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 

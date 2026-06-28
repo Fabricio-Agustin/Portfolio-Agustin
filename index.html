@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
+
 <head>
     <meta charset="UTF-8" />
 
@@ -13,7 +14,27 @@
         content="#0f172a"
     />
 
+    <meta
+        name="color-scheme"
+        content="dark light"
+    />
+
+    <meta
+        name="generator"
+        content="Vite + React"
+    />
+
     <!-- FONT AWESOME -->
+    <link
+        rel="preconnect"
+        href="https://cdnjs.cloudflare.com"
+    />
+
+    <link
+        rel="dns-prefetch"
+        href="https://cdnjs.cloudflare.com"
+    />
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -26,12 +47,12 @@
 
     <meta
         name="description"
-        content="Agustin Gibaut es desarrollador Full Stack especializado en React, JavaScript, Node.js, Python y MySQL. Portfolio profesional con proyectos de software, aplicaciones web modernas y soluciones tecnológicas."
+        content="Portfolio profesional de Agustin Gibaut. Desarrollador Full Stack especializado en React, JavaScript, Node.js, Python y MySQL. Desarrollo de aplicaciones web modernas y proyectos de software."
     />
 
     <meta
         name="keywords"
-        content="Agustin Gibaut, Fabricio Agustin Gibaut Carrizo, Desarrollador Full Stack, React Developer, JavaScript, Node.js, Python, MySQL, Programador Córdoba, Desarrollador Web Argentina"
+        content="Agustin Gibaut, Fabricio Agustin Gibaut Carrizo, React Developer, Full Stack Developer, JavaScript, Node.js, Python, MySQL, Portfolio, Programador Córdoba, Desarrollo Web Argentina"
     />
 
     <meta
@@ -41,7 +62,7 @@
 
     <meta
         name="robots"
-        content="index, follow, max-image-preview:large"
+        content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
     />
 
     <link
@@ -67,7 +88,7 @@
 
     <meta
         property="og:description"
-        content="Portfolio profesional de Agustin Gibaut. Desarrollador Full Stack especializado en React, Node.js, JavaScript, Python y MySQL."
+        content="Portfolio profesional de Agustin Gibaut. React, JavaScript, Node.js, Python y MySQL."
     />
 
     <meta
@@ -98,7 +119,7 @@
 
     <meta
         name="twitter:description"
-        content="Portfolio profesional de Agustin Gibaut. React, Node.js, Python y MySQL."
+        content="Portfolio profesional de Agustin Gibaut. React, JavaScript, Node.js, Python y MySQL."
     />
 
     <meta
@@ -106,55 +127,93 @@
         content="https://portfolio-agustin-gibaut-ecru.vercel.app/preview.png"
     />
 
-    <!-- FAVICON -->
+    <!-- FAVICONS -->
+    <link
+        rel="icon"
+        href="/favicon.ico"
+        sizes="any"
+    />
+
     <link
         rel="icon"
         type="image/png"
         href="/cubo.png"
     />
 
-    <!-- SCHEMA SEO -->
+    <link
+        rel="apple-touch-icon"
+        href="/cubo.png"
+    />
+
+    <meta
+        name="msapplication-TileColor"
+        content="#0f172a"
+    />
+
+    <!-- WEB APP -->
+    <link
+        rel="manifest"
+        href="/site.webmanifest"
+    />
+
+    <!-- STRUCTURED DATA -->
     <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Person",
-      "name":"Fabricio Agustin Gibaut Carrizo",
-      "alternateName":"Agustin Gibaut",
-      "jobTitle":"Full Stack Developer",
-      "url":"https://portfolio-agustin-gibaut-ecru.vercel.app/",
-      "image":"https://portfolio-agustin-gibaut-ecru.vercel.app/preview.png",
-      "description":"Desarrollador Full Stack especializado en React, JavaScript, Node.js, Python y MySQL.",
-      "address":{
-        "@type":"PostalAddress",
-        "addressLocality":"Córdoba",
-        "addressRegion":"Córdoba",
-        "addressCountry":"Argentina"
-      },
-      "sameAs":[
-        "https://github.com/Fabricio-Agustin",
-        "https://www.linkedin.com/in/fabricio-agustin-gibaut-carrizo"
-      ],
-      "knowsAbout":[
-        "React",
-        "JavaScript",
-        "Node.js",
-        "Python",
-        "MySQL",
-        "HTML",
-        "CSS",
-        "Git",
-        "GitHub"
-      ]
-    }
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Fabricio Agustin Gibaut Carrizo",
+  "alternateName":"Agustin Gibaut",
+  "jobTitle":"Full Stack Developer",
+  "url":"https://portfolio-agustin-gibaut-ecru.vercel.app/",
+  "image":"https://portfolio-agustin-gibaut-ecru.vercel.app/preview.png",
+  "description":"Desarrollador Full Stack especializado en React, JavaScript, Node.js, Python y MySQL.",
+  "email":"mailto:agustingibautcarrizo@gmail.com",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Córdoba",
+    "addressRegion":"Córdoba",
+    "addressCountry":"Argentina"
+  },
+  "sameAs":[
+    "https://github.com/Fabricio-Agustin",
+    "https://www.linkedin.com/in/fabricio-agustin-gibaut-carrizo"
+  ],
+  "knowsAbout":[
+    "React",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "Python",
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Firebase",
+    "HTML",
+    "CSS",
+    "Git",
+    "GitHub",
+    "Docker",
+    "Figma"
+  ]
+}
     </script>
+
 </head>
 
 <body>
+
+    <noscript>
+        Para visualizar este sitio es necesario habilitar JavaScript.
+    </noscript>
+
     <div id="root"></div>
 
     <script
         type="module"
         src="/src/main.jsx"
     ></script>
+
 </body>
+
 </html>
